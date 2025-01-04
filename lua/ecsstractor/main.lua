@@ -89,7 +89,7 @@ end
 
 local function generate_bem(result)
     local code = ""
-    local shiftwidth = vim.api.nvim_get_option('shiftwidth')
+    local shiftwidth = vim.api.nvim_get_option_value('shiftwidth', {})
 
     for block, elements in pairs(result) do
         code = code .. "." .. block .. " {\n"
